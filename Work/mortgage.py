@@ -1,6 +1,6 @@
 """ 
 mortgage.py
-Exercise 1.7
+Exercise 1.8
 """
 
 principal = 500000.0
