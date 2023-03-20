@@ -18,9 +18,12 @@ while principal > 0:
         principal = principal * (1+rate/12) - (payment + extra_payment)
         total_paid = total_paid + payment + extra_payment
         num_months = num_months + 1
+        print('Month:', num_months, 'Total paid:', total_paid, 'Principal:', principal)
     else:
         principal = principal * (1+rate/12) - payment
         total_paid = total_paid + payment
-        num_months = num_months + 1
+        num_months = num_months + 1 
+        print('Month:', num_months, 'Total paid:', total_paid, 'Principal:', principal)
 
-print('Total paid:', total_paid, 'Number of months:', num_months)
+print('Total paid:', total_paid)
+print('Number of months:', num_months)
