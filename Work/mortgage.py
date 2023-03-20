@@ -1,6 +1,6 @@
 """ 
 mortgage.py
-Exercise 1.10
+Exercise 1.18
 """
 
 principal = 500000.0
@@ -25,5 +25,5 @@ while principal > 0:
         num_months = num_months + 1 
         print('Month:', num_months, 'Total paid:', total_paid, 'Principal:', principal)
 
-print('Total paid:', total_paid)
-print('Number of months:', num_months)
+
+print(f'Total paid: {total_paid:0.2f}. Number of Months of {num_months}.')
