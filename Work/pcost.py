@@ -1,7 +1,9 @@
 # pcost.py
 #
-# Exercise 1.32
+# Exercise 2.17
 import csv
+import sys
+
 
 def portfolio_cost(filename):
 
@@ -12,13 +14,19 @@ def portfolio_cost(filename):
 
     total_cost = 0
 
-    for row in rows:
+    for n, row in enumerate(rows):
         try:
             total_cost = total_cost + int(row[1]) * float(row[2])
         except ValueError:
-            print("Couldn't parse", row)
-           
+            print(f"Row {n}: Couldn't convert: {row}")
+
     return total_cost
 
-cost = portfolio_cost('./Data/missing.csv')
+
+if len(sys.argv) == 2:
+    csv_name = sys.argv[1]
+else:
+    csv_name = './Data/missing.csv'
+
+cost = portfolio_cost(csv_name)
 print('Total Cost: ', cost)
